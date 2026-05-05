@@ -95,5 +95,5 @@ if (scrollInd) {
   });
 }
 
-console.log('%c⛏ MineMarker', 'color: #39ff7a; font-size: 20px; font-weight: bold;');
-console.log('%cMark the moments that matter.', 'color: #6b6965; font-size: 12px;');
+console.log('%c⛏ PixelCut Pro', 'color: #e8ff47; font-size: 20px; font-weight: bold;');
+console.log('%cStop scrubbing. Start editing.', 'color: #5c5a55; font-size: 12px;');

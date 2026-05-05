@@ -11,9 +11,7 @@
   --fg-dim: #5c5a55;
   --accent: #e8ff47;
   --accent-dim: #6b7a1a;
-  --purple: #c084fc;
-  --red: #ff6b6b;
-  --warm: #ff9b47;
+  --accent-muted: #a8b840;
   --surface: #0e0e11;
   --surface-border: rgba(255,255,255,0.05);
   --radius: 12px;
@@ -144,9 +142,9 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(52px, 9vw, 110px);
-  font-weight: 800; line-height: 0.95;
-  margin-bottom: 32px;
+  font-size: clamp(40px, 6.5vw, 78px);
+  font-weight: 800; line-height: 0.97;
+  margin-bottom: 28px;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
@@ -163,7 +161,7 @@ body:hover #cursor-glow { opacity: 1; }
   font-weight: 800;
 }
 .hero-sub {
-  font-size: clamp(15px, 1.8vw, 19px);
+  font-size: clamp(14px, 1.5vw, 16px);
   color: var(--fg-dim); line-height: 1.8;
   margin-bottom: 44px;
   font-family: var(--font-mono); font-weight: 400;
@@ -184,7 +182,7 @@ body:hover #cursor-glow { opacity: 1; }
 .stat { text-align: center; }
 .stat-num {
   display: block; font-family: var(--font-display);
-  font-size: 26px; font-weight: 800; color: var(--fg);
+  font-size: 22px; font-weight: 800; color: var(--fg);
   letter-spacing: -0.02em;
 }
 .stat-label {
@@ -282,7 +280,7 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(34px, 5vw, 60px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 800; line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -292,7 +290,7 @@ body:hover #cursor-glow { opacity: 1; }
   text-shadow: 0 0 40px rgba(232,255,71,0.15);
 }
 .section-desc {
-  font-size: 16px; color: var(--fg-dim); margin-top: 16px;
+  font-size: 14px; color: var(--fg-dim); margin-top: 16px;
   line-height: 1.7; font-family: var(--font-mono);
 }
 
@@ -310,7 +308,7 @@ body:hover #cursor-glow { opacity: 1; }
   transition: transform 0.4s ease, border-color 0.4s;
 }
 .problem-card:hover {
-  border-color: rgba(255,107,107,0.15);
+  border-color: rgba(232,255,71,0.1);
   transform: translateY(-4px);
 }
 .problem-card--hero {
@@ -320,27 +318,27 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .problem-num {
   font-family: var(--font-display); font-weight: 800;
-  font-size: 40px; color: var(--red);
+  font-size: 32px; color: var(--fg-dim);
   margin-bottom: 12px; letter-spacing: -0.03em;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .problem-card--hero .problem-num {
-  font-size: 72px; opacity: 0.25;
+  font-size: 56px; opacity: 0.2;
 }
 .problem-card h3 {
   font-family: var(--font-display); font-weight: 700;
-  font-size: 18px; text-transform: uppercase;
+  font-size: 16px; text-transform: uppercase;
   margin-bottom: 10px; letter-spacing: -0.01em;
   line-height: 1.3;
 }
 .problem-card--hero h3 {
-  font-size: 28px;
+  font-size: 22px;
 }
 .problem-card p {
   font-size: 13px; color: var(--fg-dim); line-height: 1.8;
 }
 .problem-card--hero p {
-  font-size: 16px; max-width: 600px; margin: 0 auto;
+  font-size: 14px; max-width: 600px; margin: 0 auto;
 }
 /* Solution card (last one) */
 .problem-card:last-child {
@@ -373,7 +371,7 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .feature-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 2px; background: linear-gradient(90deg, var(--accent), var(--purple));
+  height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-muted));
   opacity: 0; transition: opacity 0.4s;
 }
 .feature-card:hover::before { opacity: 1; }
@@ -409,7 +407,7 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .feature-card h3 {
   font-family: var(--font-display);
-  font-size: 22px; font-weight: 700; margin-bottom: 12px;
+  font-size: 18px; font-weight: 700; margin-bottom: 12px;
   text-transform: uppercase; letter-spacing: -0.01em;
 }
 .feature-card p {
@@ -477,13 +475,13 @@ body:hover #cursor-glow { opacity: 1; }
   transform: translateX(8px);
 }
 .step-number {
-  font-family: var(--font-display); font-size: 48px;
+  font-family: var(--font-display); font-size: 36px;
   font-weight: 800; color: var(--accent); opacity: 0.2;
   letter-spacing: -0.04em;
 }
 .step-content h3 {
-  font-family: var(--font-display); font-size: 24px;
-  font-weight: 700; margin-bottom: 16px;
+  font-family: var(--font-display); font-size: 20px;
+  font-weight: 700; margin-bottom: 14px;
   text-transform: uppercase; letter-spacing: -0.01em;
 }
 .step-code {
@@ -534,11 +532,11 @@ body:hover #cursor-glow { opacity: 1; }
 .terminal-line.visible { opacity: 1; transform: translateY(0); }
 .t-prompt { color: var(--fg-dim); }
 .t-cmd { color: var(--fg); font-weight: 700; }
-.t-arg { color: var(--purple); }
+.t-arg { color: var(--accent-muted); }
 .t-ok { color: var(--accent); }
-.t-warn { color: var(--red); }
+.t-warn { color: var(--fg-dim); }
 .terminal-line--response { padding-left: 16px; color: rgba(240,236,228,0.6); }
-.terminal-line--event { padding-left: 16px; color: var(--red); }
+.terminal-line--event { padding-left: 16px; color: rgba(232,255,71,0.5); }
 .terminal-cursor {
   display: inline-block; width: 8px; height: 18px;
   background: var(--accent); margin-top: 8px;
@@ -568,7 +566,7 @@ body:hover #cursor-glow { opacity: 1; }
 }
 .download-title {
   font-family: var(--font-display);
-  font-size: clamp(40px, 7vw, 88px);
+  font-size: clamp(32px, 5vw, 64px);
   font-weight: 800; line-height: 1.0;
   margin-bottom: 24px; text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -645,7 +643,7 @@ body:hover #cursor-glow { opacity: 1; }
   .problem-grid { grid-template-columns: 1fr; }
   .problem-card--hero { grid-column: span 1; }
   .workflow-step { grid-template-columns: 70px 1fr; gap: 20px; padding: 28px 20px; }
-  .step-number { font-size: 36px; }
+  .step-number { font-size: 28px; }
   .footer-inner { flex-direction: column; gap: 32px; }
   .nav-links { gap: 16px; }
 }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MineMarker — Minecraft Creator Editing Assistant</title>
-  <meta name="description" content="MineMarker is a Minecraft creator editing assistant. Drop markers while you play, get timestamps while you edit. Fabric mod + Timeline Viewer." />
+  <title>PixelCut Pro — Minecraft Creator Editing Assistant</title>
+  <meta name="description" content="PixelCut Pro is a Minecraft creator editing assistant. Drop markers while you play, get timestamps while you edit. Fabric mod + Timeline Viewer." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo" id="nav-logo">
         <span class="logo-icon">⛏</span>
-        <span class="logo-text">MINEMARKER</span>
+        <span class="logo-text">PIXELCUT PRO</span>
       </a>
       <div class="nav-links">
         <a href="#features" class="nav-link" id="nav-features">Features</a>
@@ -51,7 +51,7 @@
       </h1>
       <p class="hero-sub" id="hero-sub">
         You recorded 4 hours. Only 10 minutes matter.<br/>
-        MineMarker finds them for you.
+        PixelCut Pro finds them for you.
       </p>
       <div class="hero-actions" id="hero-actions">
         <a href="https://github.com/swaritsawarkar/MineMarker" target="_blank" class="btn btn--primary" id="hero-cta-github">
@@ -122,11 +122,11 @@
         <div class="problem-card problem-card--hero" data-reveal>
           <div class="problem-num">4hrs</div>
           <h3>You record too much footage</h3>
-          <p>A typical Minecraft session is 2–5 hours of raw recording. Maybe 10–20 minutes are actually usable. The rest? You're scrubbing. Endlessly.</p>
+          <p>A typical Minecraft session is 2–5 hours of raw recording. Maybe 10–20 minutes are actually usable. The rest is scrubbing. Endlessly.</p>
         </div>
         <div class="problem-card" data-reveal>
           <div class="problem-num">???</div>
-          <h3>"When did I find diamonds again?"</h3>
+          <h3>"When did I find diamonds?"</h3>
           <p>You know it happened. Somewhere. You just can't remember when. So you drag the playhead for 30 minutes looking for a 5-second clip.</p>
         </div>
         <div class="problem-card" data-reveal>
@@ -137,7 +137,7 @@
         <div class="problem-card" data-reveal>
           <div class="problem-num">1</div>
           <h3>You edit alone</h3>
-          <p>Big creators have editors. You have yourself, a 4-hour MP4, and no idea where the good parts are. MineMarker is the editing assistant you can't afford to hire.</p>
+          <p>Big creators have editors. You have yourself, a 4-hour MP4, and no idea where the good parts are. PixelCut Pro is the editing assistant you can't afford to hire.</p>
         </div>
         <div class="problem-card" data-reveal>
           <div class="problem-num">∅</div>
@@ -146,7 +146,7 @@
         </div>
         <div class="problem-card" data-reveal>
           <div class="problem-num">✓</div>
-          <h3>MineMarker turns chaos into a plan</h3>
+          <h3>PixelCut Pro turns chaos into a plan</h3>
           <p>Organized markers. Clean timestamps. Auto-detected events. Clip suggestions. Editing notes. Your 4-hour recording becomes a structured editing map.</p>
         </div>
       </div>
@@ -172,7 +172,7 @@
           <div class="feature-card-content">
             <span class="feature-tag">Fabric Mod</span>
             <h3>Drop markers in-game</h3>
-            <p>Hit <kbd>M</kbd> or use <code>/minemarker mark</code>. Every moment gets a precise timestamp, coordinates, and your custom note. Death, dimension changes, and low health are auto-detected.</p>
+            <p>Hit <kbd>M</kbd> or use <code>/pixelcut mark</code>. Every moment gets a precise timestamp, coordinates, and your custom note. Death, dimension changes, and low health are auto-detected.</p>
           </div>
         </div>
 
@@ -245,9 +245,9 @@
           <div class="step-content">
             <h3>Start recording + start session</h3>
             <div class="step-code">
-              <code>/minemarker start hardcore-ep-3</code>
+              <code>/pixelcut start hardcore-ep-3</code>
             </div>
-            <p>Fire up OBS, open your world, and start a MineMarker session.</p>
+            <p>Fire up OBS, open your world, and start a PixelCut Pro session.</p>
           </div>
         </div>
 
@@ -256,7 +256,7 @@
           <div class="step-content">
             <h3>Play and mark moments</h3>
             <div class="step-code">
-              <code>Press M — or — /minemarker mark diamond_ore found near lava</code>
+              <code>Press M — or — /pixelcut mark diamond_ore found near lava</code>
             </div>
             <p>Hit the keybind or type a command. Deaths and events are auto-captured.</p>
           </div>
@@ -267,7 +267,7 @@
           <div class="step-content">
             <h3>Stop and export</h3>
             <div class="step-code">
-              <code>/minemarker stop</code>
+              <code>/pixelcut stop</code>
             </div>
             <p>Session exports to JSON, TXT, CSV — ready for the timeline viewer.</p>
           </div>
@@ -306,19 +306,19 @@
         </div>
         <div class="terminal-body" id="terminal-body">
           <div class="terminal-line" data-delay="0">
-            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker start</span> <span class="t-arg">hardcore-ep-3</span>
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/pixelcut start</span> <span class="t-arg">hardcore-ep-3</span>
           </div>
           <div class="terminal-line terminal-line--response" data-delay="400">
             <span class="t-ok">✓</span> Session "hardcore-ep-3" started
           </div>
           <div class="terminal-line" data-delay="900">
-            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker mark</span> <span class="t-arg">diamond_ore found diamonds near lava</span>
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/pixelcut mark</span> <span class="t-arg">diamond_ore found diamonds near lava</span>
           </div>
           <div class="terminal-line terminal-line--response" data-delay="1300">
             <span class="t-ok">✓</span> Marker #1 added at 00:02:34
           </div>
           <div class="terminal-line" data-delay="1700">
-            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker events</span> <span class="t-arg">status</span>
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/pixelcut events</span> <span class="t-arg">status</span>
           </div>
           <div class="terminal-line terminal-line--response" data-delay="2100">
             <span class="t-ok">✓</span> Auto events: ON — deaths, dimensions, low health
@@ -327,7 +327,7 @@
             <span class="t-warn">⚠</span> AUTO: Player death at 00:05:12 — fell from a high place
           </div>
           <div class="terminal-line" data-delay="3100">
-            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker stop</span>
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/pixelcut stop</span>
           </div>
           <div class="terminal-line terminal-line--response" data-delay="3500">
             <span class="t-ok">✓</span> Session exported → JSON · TXT · CSV · README
@@ -372,7 +372,7 @@
   <footer id="footer" class="footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <span class="footer-logo">⛏ MINEMARKER</span>
+        <span class="footer-logo">⛏ PIXELCUT PRO</span>
         <p>A Minecraft creator editing assistant.<br/>Built by <a href="https://github.com/swaritsawarkar" target="_blank">@swaritsawarkar</a></p>
       </div>
       <div class="footer-right">
@@ -385,7 +385,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 MineMarker — Free & Open Source</span>
+      <span>© 2026 PixelCut Pro — Free & Open Source</span>
     </div>
   </footer>
 
