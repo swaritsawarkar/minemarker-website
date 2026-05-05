@@ -296,6 +296,67 @@ body:hover #cursor-glow { opacity: 1; }
   line-height: 1.7; font-family: var(--font-mono);
 }
 
+/* ─── PROBLEM SECTION ─── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.problem-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  transition: transform 0.4s ease, border-color 0.4s;
+}
+.problem-card:hover {
+  border-color: rgba(255,107,107,0.15);
+  transform: translateY(-4px);
+}
+.problem-card--hero {
+  grid-column: span 3;
+  text-align: center;
+  padding: 60px 40px;
+}
+.problem-num {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 40px; color: var(--red);
+  margin-bottom: 12px; letter-spacing: -0.03em;
+  opacity: 0.4;
+}
+.problem-card--hero .problem-num {
+  font-size: 72px; opacity: 0.25;
+}
+.problem-card h3 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 18px; text-transform: uppercase;
+  margin-bottom: 10px; letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.problem-card--hero h3 {
+  font-size: 28px;
+}
+.problem-card p {
+  font-size: 13px; color: var(--fg-dim); line-height: 1.8;
+}
+.problem-card--hero p {
+  font-size: 16px; max-width: 600px; margin: 0 auto;
+}
+/* Solution card (last one) */
+.problem-card:last-child {
+  border-color: rgba(232,255,71,0.12);
+  background: rgba(232,255,71,0.03);
+}
+.problem-card:last-child .problem-num {
+  color: var(--accent);
+}
+.problem-card:last-child h3 {
+  color: var(--accent);
+}
+.problem-card:last-child:hover {
+  border-color: rgba(232,255,71,0.25);
+}
+
 /* ─── FEATURES GRID ─── */
 .features-grid {
   display: grid;
@@ -581,6 +642,8 @@ body:hover #cursor-glow { opacity: 1; }
     border-radius: var(--radius) var(--radius) 0 0; height: 240px;
   }
   .feature-card--large .feature-card-content { padding: 32px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .problem-card--hero { grid-column: span 1; }
   .workflow-step { grid-template-columns: 70px 1fr; gap: 20px; padding: 28px 20px; }
   .step-number { font-size: 36px; }
   .footer-inner { flex-direction: column; gap: 32px; }
