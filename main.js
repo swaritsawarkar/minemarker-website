@@ -76,15 +76,66 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ─── PARALLAX HERO BG ───
+// ─── KINETIC HERO — MOUSE PARALLAX ───
+const heroSection = document.getElementById('hero');
+const heroContent = document.querySelector('.hero-content');
 const heroBgImg = document.querySelector('.hero-bg-img');
-if (heroBgImg) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    if (scrolled < window.innerHeight) {
-      heroBgImg.style.transform = `scale(${1.1 + scrolled * 0.0003}) translateY(${scrolled * 0.3}px)`;
-    }
+const heroParticles = document.getElementById('hero-particles');
+
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+if (heroSection) {
+  heroSection.addEventListener('mousemove', (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2; // -1 to 1
+    mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
   });
+
+  // Smooth lerp animation loop
+  function animateHero() {
+    currentX += (mouseX - currentX) * 0.06;
+    currentY += (mouseY - currentY) * 0.06;
+
+    if (heroBgImg) {
+      const scrolled = window.scrollY;
+      const scale = 1.1 + scrolled * 0.0003;
+      heroBgImg.style.transform = `scale(${scale}) translate(${currentX * -20}px, ${currentY * -15 + scrolled * 0.3}px)`;
+    }
+
+    if (heroContent) {
+      heroContent.style.transform = `translate(${currentX * 8}px, ${currentY * 6}px)`;
+    }
+
+    requestAnimationFrame(animateHero);
+  }
+  animateHero();
+}
+
+// ─── FLOATING PARTICLES ───
+if (heroParticles) {
+  function spawnParticle() {
+    const p = document.createElement('div');
+    p.classList.add('hero-particle');
+    const x = Math.random() * 100;
+    const size = 1.5 + Math.random() * 3;
+    const dur = 6 + Math.random() * 10;
+    const delay = Math.random() * 4;
+    p.style.left = x + '%';
+    p.style.bottom = '-10px';
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.animationDuration = dur + 's';
+    p.style.animationDelay = delay + 's';
+    heroParticles.appendChild(p);
+    // Remove after animation completes
+    setTimeout(() => p.remove(), (dur + delay) * 1000);
+  }
+
+  // Initial burst
+  for (let i = 0; i < 20; i++) spawnParticle();
+  // Continuous spawn
+  setInterval(spawnParticle, 800);
 }
 
 // ─── FADE SCROLL INDICATOR ON SCROLL ───
