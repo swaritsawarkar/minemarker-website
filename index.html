@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MineMarker — Minecraft Creator Editing Assistant</title>
+  <meta name="description" content="MineMarker is a Minecraft creator editing assistant. Drop markers while you play, get timestamps while you edit. Fabric mod + Timeline Viewer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- CURSOR GLOW -->
+  <div id="cursor-glow"></div>
+
+  <!-- GRAIN OVERLAY -->
+  <div id="grain"></div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">⛏</span>
+        <span class="logo-text">MINEMARKER</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link" id="nav-features">Features</a>
+        <a href="#workflow" class="nav-link" id="nav-workflow">Workflow</a>
+        <a href="#commands" class="nav-link" id="nav-commands">Commands</a>
+        <a href="#download" class="nav-link nav-link--cta" id="nav-download">Get it free ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="section section--hero">
+    <div class="hero-bg">
+      <img src="/img/hero-cave.png" alt="Minecraft cave scene" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        V4.3 — Latest Release
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-title-line hero-title-line--1">Mark the</span>
+        <span class="hero-title-line hero-title-line--2"><em>moments</em></span>
+        <span class="hero-title-line hero-title-line--3">that matter.</span>
+      </h1>
+      <p class="hero-sub" id="hero-sub">
+        Drop markers while you play Minecraft.<br/>
+        Get timestamps while you edit.
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="https://github.com/swarit-lol/MineMarker" target="_blank" class="btn btn--primary" id="hero-cta-github">
+          <span class="btn-icon">◆</span> View on GitHub
+        </a>
+        <a href="#features" class="btn btn--ghost" id="hero-cta-learn">
+          See how it works ↓
+        </a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-num">4.3</span>
+          <span class="stat-label">Version</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Free forever</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">26.1.2</span>
+          <span class="stat-label">MC Version</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="section section--marquee" id="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>MARKERS</span><span class="marquee-dot">◆</span>
+        <span>TIMESTAMPS</span><span class="marquee-dot">◆</span>
+        <span>EVENTS</span><span class="marquee-dot">◆</span>
+        <span>TIMELINE</span><span class="marquee-dot">◆</span>
+        <span>EXPORTS</span><span class="marquee-dot">◆</span>
+        <span>FABRIC MOD</span><span class="marquee-dot">◆</span>
+        <span>KEYBINDS</span><span class="marquee-dot">◆</span>
+        <span>DESKTOP APP</span><span class="marquee-dot">◆</span>
+        <span>MARKERS</span><span class="marquee-dot">◆</span>
+        <span>TIMESTAMPS</span><span class="marquee-dot">◆</span>
+        <span>EVENTS</span><span class="marquee-dot">◆</span>
+        <span>TIMELINE</span><span class="marquee-dot">◆</span>
+        <span>EXPORTS</span><span class="marquee-dot">◆</span>
+        <span>FABRIC MOD</span><span class="marquee-dot">◆</span>
+        <span>KEYBINDS</span><span class="marquee-dot">◆</span>
+        <span>DESKTOP APP</span><span class="marquee-dot">◆</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS IT -->
+  <section id="features" class="section section--features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-reveal>( 01 )</span>
+        <h2 class="section-title" data-reveal>
+          Not a replay mod.<br/>
+          <em>An editing weapon.</em>
+        </h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card feature-card--large" data-reveal data-tilt>
+          <div class="feature-card-img">
+            <img src="/img/floating-blocks.png" alt="Minecraft blocks" />
+          </div>
+          <div class="feature-card-content">
+            <span class="feature-tag">Fabric Mod</span>
+            <h3>Drop markers in-game</h3>
+            <p>Hit <kbd>M</kbd> or use <code>/minemarker mark</code>. Every moment gets a precise timestamp, coordinates, and your custom note. Death, dimension changes, and low health are auto-detected.</p>
+          </div>
+        </div>
+
+        <div class="feature-card" data-reveal data-tilt>
+          <div class="feature-card-icon">🎬</div>
+          <span class="feature-tag">Timeline Viewer</span>
+          <h3>Visual editing timeline</h3>
+          <p>Load your session + your video. Click any marker to jump playback. Filter, export, and get rule-based clip suggestions.</p>
+        </div>
+
+        <div class="feature-card" data-reveal data-tilt>
+          <div class="feature-card-icon">📦</div>
+          <span class="feature-tag">Desktop App</span>
+          <h3>One portable .exe</h3>
+          <p>Windows portable build. One-click mod install. Load last session automatically. No setup, no dependencies, no accounts.</p>
+        </div>
+
+        <div class="feature-card" data-reveal data-tilt>
+          <div class="feature-card-icon">⚡</div>
+          <span class="feature-tag">Auto Events</span>
+          <h3>Never miss a moment</h3>
+          <p>Player deaths, dimension changes, low health warnings — all captured automatically while you focus on playing.</p>
+        </div>
+
+        <div class="feature-card" data-reveal data-tilt>
+          <div class="feature-card-icon">📊</div>
+          <span class="feature-tag">Multi-Export</span>
+          <h3>JSON · TXT · CSV</h3>
+          <p>Export editing notes, marker spreadsheets, creator suggestions, and editor review files. Use them in Premiere, DaVinci, or any editor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEWER SHOWCASE -->
+  <section id="viewer" class="section section--viewer">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-tag" data-reveal>( 02 )</span>
+        <h2 class="section-title" data-reveal>
+          The Timeline Viewer
+        </h2>
+        <p class="section-desc" data-reveal>Load your session. Load your video. Edit smarter.</p>
+      </div>
+      <div class="viewer-showcase" data-reveal>
+        <div class="viewer-frame">
+          <div class="viewer-frame-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <img src="/img/timeline-viewer.png" alt="MineMarker Timeline Viewer" class="viewer-img" />
+        </div>
+        <div class="viewer-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section id="workflow" class="section section--workflow">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-reveal>( 03 )</span>
+        <h2 class="section-title" data-reveal>
+          The workflow is<br/><em>dead simple.</em>
+        </h2>
+      </div>
+
+      <div class="workflow-steps">
+        <div class="workflow-step" data-reveal>
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Start recording + start session</h3>
+            <div class="step-code">
+              <code>/minemarker start hardcore-ep-3</code>
+            </div>
+            <p>Fire up OBS, open your world, and start a MineMarker session.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step" data-reveal>
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Play and mark moments</h3>
+            <div class="step-code">
+              <code>Press M — or — /minemarker mark diamond_ore found near lava</code>
+            </div>
+            <p>Hit the keybind or type a command. Deaths and events are auto-captured.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step" data-reveal>
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Stop and export</h3>
+            <div class="step-code">
+              <code>/minemarker stop</code>
+            </div>
+            <p>Session exports to JSON, TXT, CSV — ready for the timeline viewer.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step" data-reveal>
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Open the viewer and edit</h3>
+            <div class="step-code">
+              <code>Load Last Session → Click markers → Jump to moments</code>
+            </div>
+            <p>Visual timeline with your video. Click any marker to jump. Get clip suggestions. Export editing notes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMANDS -->
+  <section id="commands" class="section section--commands">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-tag" data-reveal>( 04 )</span>
+        <h2 class="section-title" data-reveal>
+          Commands
+        </h2>
+      </div>
+
+      <div class="commands-terminal" data-reveal>
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-title">minecraft — chat</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-line" data-delay="0">
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker start</span> <span class="t-arg">hardcore-ep-3</span>
+          </div>
+          <div class="terminal-line terminal-line--response" data-delay="400">
+            <span class="t-ok">✓</span> Session "hardcore-ep-3" started
+          </div>
+          <div class="terminal-line" data-delay="900">
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker mark</span> <span class="t-arg">diamond_ore found diamonds near lava</span>
+          </div>
+          <div class="terminal-line terminal-line--response" data-delay="1300">
+            <span class="t-ok">✓</span> Marker #1 added at 00:02:34
+          </div>
+          <div class="terminal-line" data-delay="1700">
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker events</span> <span class="t-arg">status</span>
+          </div>
+          <div class="terminal-line terminal-line--response" data-delay="2100">
+            <span class="t-ok">✓</span> Auto events: ON — deaths, dimensions, low health
+          </div>
+          <div class="terminal-line terminal-line--event" data-delay="2600">
+            <span class="t-warn">⚠</span> AUTO: Player death at 00:05:12 — fell from a high place
+          </div>
+          <div class="terminal-line" data-delay="3100">
+            <span class="t-prompt">&gt;</span> <span class="t-cmd">/minemarker stop</span>
+          </div>
+          <div class="terminal-line terminal-line--response" data-delay="3500">
+            <span class="t-ok">✓</span> Session exported → JSON · TXT · CSV · README
+          </div>
+          <div class="terminal-cursor"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETHER / CTA SECTION -->
+  <section id="download" class="section section--download">
+    <div class="download-bg">
+      <img src="/img/nether-portal.png" alt="Nether portal" class="download-bg-img" />
+      <div class="download-bg-overlay"></div>
+    </div>
+    <div class="container download-content">
+      <h2 class="download-title" data-reveal>
+        <span>Ready to</span>
+        <em>mark moments?</em>
+      </h2>
+      <p class="download-desc" data-reveal>Free. Open source. No accounts. No telemetry. Just timestamps.</p>
+      <div class="download-actions" data-reveal>
+        <a href="https://github.com/swarit-lol/MineMarker/releases" target="_blank" class="btn btn--primary btn--large" id="download-cta">
+          <span class="btn-icon">↓</span> Download V4.3
+        </a>
+        <a href="https://github.com/swarit-lol/MineMarker" target="_blank" class="btn btn--ghost btn--large" id="download-github">
+          <span class="btn-icon">◆</span> Source Code
+        </a>
+      </div>
+      <div class="download-meta" data-reveal>
+        <span>Minecraft Java 26.1.2</span>
+        <span>·</span>
+        <span>Fabric 0.19.2</span>
+        <span>·</span>
+        <span>Windows x64</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">⛏ MINEMARKER</span>
+        <p>A Minecraft creator editing assistant.<br/>Built by <a href="https://github.com/swarit-lol" target="_blank">@swarit-lol</a></p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://github.com/swarit-lol/MineMarker" target="_blank">GitHub</a>
+          <a href="https://github.com/swarit-lol/MineMarker/releases" target="_blank">Releases</a>
+          <a href="https://github.com/swarit-lol/MineMarker/blob/main/CHANGELOG.md" target="_blank">Changelog</a>
+          <a href="https://github.com/swarit-lol/MineMarker/blob/main/ROADMAP.md" target="_blank">Roadmap</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MineMarker — Free & Open Source</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
